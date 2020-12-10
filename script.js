@@ -39,22 +39,36 @@ var requireLength = prompt(
 );
 var newPasswordLength = requireLength;
 
-console.log(newPasswordLength);
-
-var requireLowerCase = confirm("Does your password need lower case characters");
-if (requireLowerCase) {
-  function lowerCaseRequired (str) {
-    if ((str===null) || (str===''))
-         return false;
-    else
-     str = str.toString();
-  
-   return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-  }
-  
-  console.log(lowerCaseRequired('Where a password would go to be lowercased'));
+if (requireLength < 8 || requireLength > 128) {
+  prompt("Please enter number between 8 - 128");
+}
+else if (requireLength > 8 || requireLength < 128) {
+  var requireLength = prompt("PLEASE enter a number between 8 - 128");
 }
 
+console.log(newPasswordLength);
 
-// var numbersPassword = confirm("Do you need numbers in your password?");
+var requireUpperCase = confirm("Does your password need upper case characters");
+if (requireUpperCase) {
+  function upperCaseRequired(str) {
+    if (str === null || str === "") return false;
+    else str = str.toString();
+
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  }
+
+  console.log(upperCaseRequired("Where a password would go to be uppercased"));
+}
+// var requireNumbers = confirm("Do you need numbers in your password?");
+
+// if (numbers) {
+// var numbersRequired =
+
 // var specialCharPassword = confirm("Do you require special characters?");
+
+var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
+var numberSet = "0123456789";
+var specialCharacters = "!@#$%^&*()_+";
