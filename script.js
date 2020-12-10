@@ -37,40 +37,37 @@ var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var numberSet = "0123456789";
 var specialCharacters = "!@#$%^&*()_+";
-var requiredCharacters = ""
-
-
-
+var requiredCharacters = "";
+// User response to length requirement
 var requireLength = prompt(
   "From 8 - 128 characters,what length do you require?"
 );
-var newPasswordLength = requireLength;
+var passwordLength = requireLength;
 
 while (requireLength < 8 || requireLength > 128) {
   var requireLength = prompt("PLEASE enter number between 8 - 128");
 }
-console.log("Password Length: " + newPasswordLength);
-
+console.log("Password Length: " + passwordLength);
+// user response to uppercase requirement
 var requireUpperCase = confirm("Does your password need upper case characters");
 if (requireUpperCase) {
-  function upperCaseRequired(str) {
-    if (str === null || str === "") return false;
-    else str = str.toString();
-
-    return str.replace(/\w\S*/g, function (txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-  }
-
-  console.log(upperCaseRequired("Where a password would go to be uppercased"));
+  var requiredCharacters = requiredCharacters.concat(upperCaseCharacters);
 }
-var requireNumbers = confirm("Do you need numbers in your password?");
-if (requireNumbers){
-  var newPassword = requiredCharacters.concat(numberSet);
+
+// // user response to lowercase requirement
+var requireLowerCase = confirm("Does your password need lower case characters");
+if (requireLowerCase) {
+  var requiredCharacters = requiredCharacters.concat(lowerCaseCharacters);
 }
-console.log(newPassword);
-// if (numbers) {
-// var numbersRequired =
 
-// var specialCharPassword = confirm("Do you require special characters?");
+// // User response to number requirement
 
+// var requireNumbers = confirm("Do you need numbers in your password?");
+// if (requireNumbers) {
+//   var requiredCharacters = requiredCharacters.concat(numberSet);
+// }
+// //  User response to special character requirement
+// var requireSpecial = confirm("Do you require special characters?");
+
+// if (requireSpecial) {
+//   var requiredCharacters = requiredCharacters.concat(specialCharacters);
