@@ -13,57 +13,55 @@ var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var numberSet = "0123456789";
 var specialCharacters = "!@#$%^&*()_+";
 var requiredCharacters = "";
-
-// User response to length requirement
-var requireLength = prompt(
-  "How many characters do you require in your password? Enter a number from 8 - 128"
-);
-var passwordLength = parseInt(requireLength);
-
-if (passwordLength <= 8 && passwordLength >= 128) {
-  var requireLength = prompt("PLEASE enter number between 8 - 128");
-} else {
-  alert("PLEASE enter number between 8 - 128");
-}
-
-console.log(passwordLength);
-// user response to uppercase requirement
-var requireUpperCase = confirm(
-  "Do you require upper case characters in your password"
-);
-if (requireUpperCase) {
-  var requiredCharacters = requiredCharacters.concat(upperCaseCharacters);
-}
-
-// // user response to lowercase requirement
-var requireLowerCase = confirm(
-  "Do you require lower case characters in your password"
-);
-if (requireLowerCase) {
-  var requiredCharacters = requiredCharacters.concat(lowerCaseCharacters);
-}
-
-// // User response to number requirement
-
-var requireNumbers = confirm("Do you require numbers in your password?");
-if (requireNumbers) {
-  var requiredCharacters = requiredCharacters.concat(numberSet);
-}
-
-// //  User response to special character requirement
-var requireSpecial = confirm(
-  "Do you require special characters in your password?"
-);
-//  User response to special character requirement
-if (requireSpecial) {
-  var requiredCharacters = requiredCharacters.concat(specialCharacters);
-}
-console.log("Required characters in password:" + requiredCharacters);
-console.log("The length of the password is: " + passwordLength);
-// all the logic goes here to generate a password using
-// indexof, loop functions, and other stuff you already know
-
 function generatePassword() {
+  // User response to length requirement
+  var requireLength = prompt(
+    "How many characters do you require in your password? Enter a number from 8 - 128"
+  );
+  var passwordLength = parseInt(requireLength);
+
+  if (passwordLength <= 8 || passwordLength >= 128 || isNaN(passwordLength)) {
+    alert("PLEASE enter number between 8 - 128");
+    return generatePassword();
+  }
+
+  console.log(passwordLength);
+  // user response to uppercase requirement
+  var requireUpperCase = confirm(
+    "Do you require upper case characters in your password"
+  );
+  if (requireUpperCase) {
+     requiredCharacters = requiredCharacters.concat(upperCaseCharacters);
+  }
+
+  // // user response to lowercase requirement
+  var requireLowerCase = confirm(
+    "Do you require lower case characters in your password"
+  );
+  if (requireLowerCase) {
+     requiredCharacters = requiredCharacters.concat(lowerCaseCharacters);
+  }
+
+  // // User response to number requirement
+
+  var requireNumbers = confirm("Do you require numbers in your password?");
+  if (requireNumbers) {
+     requiredCharacters = requiredCharacters.concat(numberSet);
+  }
+
+  // //  User response to special character requirement
+  var requireSpecial = confirm(
+    "Do you require special characters in your password?"
+  );
+  //  User response to special character requirement
+  if (requireSpecial) {
+     requiredCharacters = requiredCharacters.concat(specialCharacters);
+  }
+  console.log("Required characters in password:" + requiredCharacters);
+  console.log("The length of the password is: " + passwordLength);
+  // all the logic goes here to generate a password using
+  // indexof, loop functions, and other stuff you already know
+
   var length = passwordLength,
     charset = requiredCharacters,
     retVal = "";
