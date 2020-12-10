@@ -8,32 +8,6 @@ function writePassword() {
 
   passwordText.value = password;
 }
-function generatePassword() {
-  // all the logic goes here to generate a password using
-  // indexof, loop functions, and other stuff you already know
-
-  return "temp password";
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
-// WHEN prompted for character types to include in the password
-// THEN I choose lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-
 var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var numberSet = "0123456789";
@@ -44,12 +18,15 @@ var requiredCharacters = "";
 var requireLength = prompt(
   "How many characters do you require in your password? Enter a number from 8 - 128"
 );
-var passwordLength = requireLength;
+var passwordLength = parseInt(requireLength);
 
-if (passwordLength < 8 || passwordLength > 128) {
+if (passwordLength <= 8 && passwordLength >= 128) {
   var requireLength = prompt("PLEASE enter number between 8 - 128");
+} else {
+  alert("PLEASE enter number between 8 - 128");
 }
 
+console.log(passwordLength);
 // user response to uppercase requirement
 var requireUpperCase = confirm(
   "Do you require upper case characters in your password"
@@ -83,3 +60,17 @@ if (requireSpecial) {
 }
 console.log("Required characters in password:" + requiredCharacters);
 console.log("The length of the password is: " + passwordLength);
+// all the logic goes here to generate a password using
+// indexof, loop functions, and other stuff you already know
+
+function generatePassword() {
+  var length = passwordLength,
+    charset = requiredCharacters,
+    retVal = "";
+  for (var i = 0, n = charset.length; i < length; ++i) {
+    retVal += charset.charAt(Math.floor(Math.random() * n));
+  }
+  return retVal;
+}
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
