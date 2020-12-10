@@ -33,11 +33,13 @@ generateBtn.addEventListener("click", writePassword);
 // THEN a password is generated that matches the selected criteria
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
+
 var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var numberSet = "0123456789";
 var specialCharacters = "!@#$%^&*()_+";
 var requiredCharacters = "";
+
 // User response to length requirement
 var requireLength = prompt(
   "How many characters do you require in your password? Enter a number from 8 - 128"
@@ -48,7 +50,6 @@ if (passwordLength < 8 || passwordLength > 128) {
   var requireLength = prompt("PLEASE enter number between 8 - 128");
 }
 
-console.log("Password Length: " + passwordLength);
 // user response to uppercase requirement
 var requireUpperCase = confirm(
   "Do you require upper case characters in your password"
@@ -80,4 +81,5 @@ var requireSpecial = confirm(
 if (requireSpecial) {
   var requiredCharacters = requiredCharacters.concat(specialCharacters);
 }
-console.log(requiredCharacters);
+console.log("Required characters in password:" + requiredCharacters);
+console.log("The length of the password is: " + passwordLength);
