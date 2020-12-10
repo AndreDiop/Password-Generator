@@ -40,34 +40,44 @@ var specialCharacters = "!@#$%^&*()_+";
 var requiredCharacters = "";
 // User response to length requirement
 var requireLength = prompt(
-  "From 8 - 128 characters,what length do you require?"
+  "How many characters do you require in your password? Enter a number from 8 - 128"
 );
 var passwordLength = requireLength;
 
-while (requireLength < 8 || requireLength > 128) {
+if (passwordLength < 8 || passwordLength > 128) {
   var requireLength = prompt("PLEASE enter number between 8 - 128");
 }
+
 console.log("Password Length: " + passwordLength);
 // user response to uppercase requirement
-var requireUpperCase = confirm("Does your password need upper case characters");
+var requireUpperCase = confirm(
+  "Do you require upper case characters in your password"
+);
 if (requireUpperCase) {
   var requiredCharacters = requiredCharacters.concat(upperCaseCharacters);
 }
 
 // // user response to lowercase requirement
-var requireLowerCase = confirm("Does your password need lower case characters");
+var requireLowerCase = confirm(
+  "Do you require lower case characters in your password"
+);
 if (requireLowerCase) {
   var requiredCharacters = requiredCharacters.concat(lowerCaseCharacters);
 }
 
 // // User response to number requirement
 
-// var requireNumbers = confirm("Do you need numbers in your password?");
-// if (requireNumbers) {
-//   var requiredCharacters = requiredCharacters.concat(numberSet);
-// }
-// //  User response to special character requirement
-// var requireSpecial = confirm("Do you require special characters?");
+var requireNumbers = confirm("Do you require numbers in your password?");
+if (requireNumbers) {
+  var requiredCharacters = requiredCharacters.concat(numberSet);
+}
 
-// if (requireSpecial) {
-//   var requiredCharacters = requiredCharacters.concat(specialCharacters);
+// //  User response to special character requirement
+var requireSpecial = confirm(
+  "Do you require special characters in your password?"
+);
+//  User response to special character requirement
+if (requireSpecial) {
+  var requiredCharacters = requiredCharacters.concat(specialCharacters);
+}
+console.log(requiredCharacters);
