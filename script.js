@@ -33,20 +33,23 @@ generateBtn.addEventListener("click", writePassword);
 // THEN a password is generated that matches the selected criteria
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
+var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
+var numberSet = "0123456789";
+var specialCharacters = "!@#$%^&*()_+";
+var requiredCharacters = ""
+
+
 
 var requireLength = prompt(
   "From 8 - 128 characters,what length do you require?"
 );
 var newPasswordLength = requireLength;
 
-if (requireLength < 8 || requireLength > 128) {
-  prompt("Please enter number between 8 - 128");
+while (requireLength < 8 || requireLength > 128) {
+  var requireLength = prompt("PLEASE enter number between 8 - 128");
 }
-else if (requireLength > 8 || requireLength < 128) {
-  var requireLength = prompt("PLEASE enter a number between 8 - 128");
-}
-
-console.log(newPasswordLength);
+console.log("Password Length: " + newPasswordLength);
 
 var requireUpperCase = confirm("Does your password need upper case characters");
 if (requireUpperCase) {
@@ -61,14 +64,13 @@ if (requireUpperCase) {
 
   console.log(upperCaseRequired("Where a password would go to be uppercased"));
 }
-// var requireNumbers = confirm("Do you need numbers in your password?");
-
+var requireNumbers = confirm("Do you need numbers in your password?");
+if (requireNumbers){
+  var newPassword = requiredCharacters.concat(numberSet);
+}
+console.log(newPassword);
 // if (numbers) {
 // var numbersRequired =
 
 // var specialCharPassword = confirm("Do you require special characters?");
 
-var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
-var numberSet = "0123456789";
-var specialCharacters = "!@#$%^&*()_+";
