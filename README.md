@@ -48,7 +48,7 @@ These screen shots show the password prompts and the displayed password in the *
 Users are prompted to enter how many characters between 8 - 128 they need
 ```
 
-![Image of Password Generator at](assets/images/about768.png)
+![Image of Password Generator at]()
 
 ```bash
 Users are presented with a password to use after clicking generate
