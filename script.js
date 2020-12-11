@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -8,12 +7,15 @@ function writePassword() {
 
   passwordText.value = password;
 }
+
+
 var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var numberSet = "0123456789";
 var specialCharacters = "!@#$%^&*()_+";
 var requiredCharacters = "";
 function generatePassword() {
+  // user responses
   // User response to length requirement
   var requireLength = prompt(
     "How many characters do you require in your password? Enter a number from 8 - 128"
@@ -31,7 +33,7 @@ function generatePassword() {
     "Do you require upper case characters in your password"
   );
   if (requireUpperCase) {
-     requiredCharacters = requiredCharacters.concat(upperCaseCharacters);
+    requiredCharacters = requiredCharacters.concat(upperCaseCharacters);
   }
 
   // // user response to lowercase requirement
@@ -39,14 +41,14 @@ function generatePassword() {
     "Do you require lower case characters in your password"
   );
   if (requireLowerCase) {
-     requiredCharacters = requiredCharacters.concat(lowerCaseCharacters);
+    requiredCharacters = requiredCharacters.concat(lowerCaseCharacters);
   }
 
   // // User response to number requirement
 
   var requireNumbers = confirm("Do you require numbers in your password?");
   if (requireNumbers) {
-     requiredCharacters = requiredCharacters.concat(numberSet);
+    requiredCharacters = requiredCharacters.concat(numberSet);
   }
 
   // //  User response to special character requirement
@@ -55,7 +57,7 @@ function generatePassword() {
   );
   //  User response to special character requirement
   if (requireSpecial) {
-     requiredCharacters = requiredCharacters.concat(specialCharacters);
+    requiredCharacters = requiredCharacters.concat(specialCharacters);
   }
   console.log("Required characters in password:" + requiredCharacters);
   console.log("The length of the password is: " + passwordLength);
@@ -63,12 +65,11 @@ function generatePassword() {
   // indexof, loop functions, and other stuff you already know
 
   var length = passwordLength,
-    charset = requiredCharacters,
-    retVal = "";
-  for (var i = 0, n = charset.length; i < length; ++i) {
-    retVal += charset.charAt(Math.floor(Math.random() * n));
+    newPassword = "";
+  for (var i = 0, n = requiredCharacters.length; i < length; ++i) {
+    newPassword += requiredCharacters.charAt(Math.floor(Math.random() * n));
   }
-  return retVal;
+  return newPassword;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
