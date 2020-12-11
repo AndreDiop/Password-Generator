@@ -12,7 +12,7 @@ function writePassword() {
 var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var numberSet = "0123456789";
-var specialCharacters = "!@#$%^&*()_+";
+var specialCharacters = "!@#$%^&*()_+_+~`{}|[]:',./<>?";
 var requiredCharacters = "";
 function generatePassword() {
   // user responses
@@ -34,6 +34,8 @@ function generatePassword() {
   );
   if (requireUpperCase) {
     requiredCharacters = requiredCharacters.concat(upperCaseCharacters);
+  }else {
+    alert("This makes your password less secure!");
   }
 
   // // user response to lowercase requirement
@@ -42,13 +44,17 @@ function generatePassword() {
   );
   if (requireLowerCase) {
     requiredCharacters = requiredCharacters.concat(lowerCaseCharacters);
-  }
+  }else {
+    alert("This makes your password less secure!");
+    }
 
   // // User response to number requirement
 
   var requireNumbers = confirm("Do you require numbers in your password?");
   if (requireNumbers) {
     requiredCharacters = requiredCharacters.concat(numberSet);
+  }else {
+    alert("This makes your password less secure!");
   }
 
   // //  User response to special character requirement
@@ -58,7 +64,9 @@ function generatePassword() {
   //  User response to special character requirement
   if (requireSpecial) {
     requiredCharacters = requiredCharacters.concat(specialCharacters);
-  }
+  }else {
+    alert("This makes your password less secure!");
+    }
   console.log("Required characters in password:" + requiredCharacters);
   console.log("The length of the password is: " + passwordLength);
   // all the logic goes here to generate a password using
