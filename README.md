@@ -23,9 +23,9 @@ Utilizing knowledge of Javascript, for loops, truth statements and methods, I wa
 Users will access the page through either the direct link to the deployed application
 
 ```bash
-https://andrediop.github.io/password-generator/
 ```
 
+https://andrediop.github.io/Password-Generator/
 or through the Github repository
 
 ```bash
