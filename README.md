@@ -2,17 +2,17 @@
 
 ## Table of Contents
 
-[About](https://github.com/AndreDiop/password-generator/blob/main/README.md#About)
+[About](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#About)
 
-[Installation](https://github.com/AndreDiop/password-generator/blob/main/README.md#Access)
+[Installation](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Access)
 
-[Usage](https://github.com/AndreDiop/password-generator/blob/main/README.md#Usage)
+[Usage](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Usage)
 
-[Screenshots](https://github.com/AndreDiop/password-generator/blob/main/README.md#Screenshots)
+[Screenshots](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Screenshots)
 
-[Contributing](https://github.com/AndreDiop/password-generator/blob/main/README.md#Contributing)
+[Contributing](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Contributing)
 
-[Licenses](https://github.com/AndreDiop/password-generator/blob/main/README.md#Licenses)
+[Licenses](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Licenses)
 
 # About
 
@@ -23,13 +23,13 @@ Utilizing knowledge of Javascript, for loops, truth statements and methods, I wa
 Users will access the page through either the direct link to the deployed application
 
 ```bash
+https://andrediop.github.io/Password-Generator/
 ```
 
-https://andrediop.github.io/Password-Generator/
 or through the Github repository
 
 ```bash
-https://github.com/AndreDiop/password-generator
+https://github.com/AndreDiop/Password-Generator
 ```
 
 ## Usage
