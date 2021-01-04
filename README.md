@@ -18,6 +18,9 @@
 
 Utilizing knowledge of Javascript, for loops, truth statements and methods, I was able to create a password generator that generates a password based on user specifications.
 
+12/31/2020
+Coming back to this app I have since added some effects to the background, and given the text this retro led effect. The more and more I saw it, the more it gave me Matrix vibes, so I think I will eventually take it in that direction visually.
+
 ## Access
 
 Users will access the page through either the direct link to the deployed application
@@ -34,7 +37,7 @@ https://github.com/AndreDiop/Password-Generator
 
 ## Usage
 
-This password generator should **NOT** be used for anything were security is needed. This is just to demonstrate the ability to manipulate user input using Javascript.
+This password generator should **NOT** be used for anything where security is needed. This is just to demonstrate the ability to manipulate user input using Javascript.
 
 After clicking the generate password button, users are prompted for how many characters they need. 
 
