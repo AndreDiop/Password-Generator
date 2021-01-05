@@ -50,31 +50,20 @@ When users decline to modify their passwords, they are alerted that this makes t
 These screen shots show the password prompts and the displayed password in the *password generator* field
 
 ```bash
-Users are prompted to enter how many characters between 8 - 128 they need
+Users are prompted to click the lock to begin
 ```
 
 ![Image of how many characters required ](images/howmany.png)
 
-```bash
-Users are reminded to enter a value between 8- 128 when the value is not a number or not between the range of 8 - 128.
-```
-
-![Image of bad value entered](images/badinput.png)
 
 
 
 ```bash
-Users are presented with a password to use after clicking generate
+Users are presented with a password to use after clicking generate and answering the alert prompts
 
 ```
 ![Image of Password Generator](images/newpassword.png)
 
-
-```bash
-Users are alerted when password is less secure after not adding modifications to password
-
-```
-![Image of Password less secure](images/lesssecure.png)
 
 
 ## Contributing
