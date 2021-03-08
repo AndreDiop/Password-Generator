@@ -15,8 +15,11 @@
 [Licenses](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Licenses)
 
 # About
+Our brains are great at creating information, storing however; not so great. With all of the things that we must remember on a daily basis combined with the increasingly stringent password requirements,  I was able to create a password generator that generates a password based on user specifications to make remembering passwords one less thing to worry about.
 
-Utilizing knowledge of Javascript, for loops, truth statements and methods, I was able to create a password generator that generates a password based on user specifications.
+
+This Password Generator runs in the browser and features dynamically updated HTML and CSS powered by JavaScript.
+
 
 12/31/2020
 Coming back to this app I have since added some effects to the background, and given the text this retro led effect. The more and more I saw it, the more it gave me Matrix vibes, so I think I will eventually take it in that direction visually.
@@ -31,9 +34,30 @@ https://andrediop.github.io/Password-Generator/
 
 or through the Github repository
 
+
+1. Users will navigate to the github Repository to clone the repository.
 ```bash
 https://github.com/AndreDiop/Password-Generator
 ```
+2. To clone and run this application, you will need Git and required NPM dependancies installed on your computer. Inside of your command line editor do the following:
+
+ ```bash
+git clone https://github.com/AndreDiop/Passeword-Generator.git
+
+npm install
+```
+3.Start the server instance on your local machine
+ ```bash
+
+npm start
+```
+
+
+
+This app requires the following packages, [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install), [UUID](https://www.npmjs.com/package/uuid), [Compression](https://www.npmjs.com/package/compression), [Express](https://www.npmjs.com/package/express)
+
+
+
 
 ## Usage
 
