@@ -53,7 +53,7 @@ These screen shots show the password prompts and the displayed password in the *
 Users are prompted to click the lock to begin
 ```
 
-![Image of how many characters required ](images/howmany.png)
+![Image of how many characters required ](https://media.giphy.com/media/h1YCsA278Ho14YeXiP/giphy.gif)
 
 
 
@@ -62,7 +62,7 @@ Users are prompted to click the lock to begin
 Users are presented with a password to use after clicking generate and answering the alert prompts
 
 ```
-![Image of Password Generator](images/newpassword.png)
+
 
 
 
