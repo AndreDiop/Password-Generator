@@ -14,11 +14,14 @@
 
 [Licenses](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Licenses)
 
+
+[Future Development](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Future)
+
 # About
 Our brains are great at creating information, storing however; not so great. With all of the things that we must remember on a daily basis combined with the increasingly stringent password requirements,  I was able to create a password generator that generates a password based on user specifications to make remembering passwords one less thing to worry about.
 
 
-This Password Generator runs in the browser and features dynamically updated HTML and CSS powered by JavaScript.
+This Password Generator runs in the browser and features dynamically updated HTML and CSS powered by JavaScript alrts and truth statements.
 
 
 12/31/2020
@@ -39,7 +42,7 @@ or through the Github repository
 ```bash
 https://github.com/AndreDiop/Password-Generator
 ```
-2. To clone and run this application, you will need Git and required NPM dependancies installed on your computer. Inside of your command line editor do the following:
+2. To clone and run this application, you will need Git. Inside of your command line editor do the following:
 
  ```bash
 git clone https://github.com/AndreDiop/Passeword-Generator.git
@@ -52,9 +55,6 @@ npm install
 npm start
 ```
 
-
-
-This app requires the following packages, [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install), [UUID](https://www.npmjs.com/package/uuid), [Compression](https://www.npmjs.com/package/compression), [Express](https://www.npmjs.com/package/express)
 
 
 
@@ -96,6 +96,18 @@ This app couldn't have been built with out fellow students, instructors, tutors,
 
 I'm not taking requests at this time however, please reach out to me if you see ways that I can improve upon my code.
 
+
+## Future Development
+
+Moving forward with this app I would like to reduce the amount of code used to make this app work.
+
+Using regex to represent large data sets of numbers with less redundancy.
+
+I would like to remove alerts from the functioning of the app and use something less intrusive or just having checkboxes of what the password requirements are.
+
+Add a paralax element to the background.
+
+Consider using an 8 bit theme and going with a completely vibe that way.
 
 ## License
 
