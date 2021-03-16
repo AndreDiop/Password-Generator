@@ -18,14 +18,13 @@
 [Future Development](https://github.com/AndreDiop/Password-Generator/blob/main/README.md#Future)
 
 # About
-Our brains are great at creating information, storing however; not so great. With all of the things that we must remember on a daily basis combined with the increasingly stringent password requirements,  I was able to create a password generator that generates a password based on user specifications to make remembering passwords one less thing to worry about.
+This project is a password generator using HTML, CSS, and JavaScript to create secure passwords based on criteria. Users choose the types of characters to include in the password as well as the length of the password-based on inputs by prompts. The code will check for a valid length (between 8 and 128 characters) and will validate that at least one character type has been chosen. Random characters will be chosen and the generated password will be displayed on the page.
 
 
-This Password Generator runs in the browser and features dynamically updated HTML and CSS powered by JavaScript alrts and truth statements.
+This Password Generator runs in the browser and features dynamically updated HTML and CSS powered by JavaScript alerts and truth statements.
 
 
-12/31/2020
-Coming back to this app I have since added some effects to the background, and given the text this retro led effect. The more and more I saw it, the more it gave me Matrix vibes, so I think I will eventually take it in that direction visually.
+
 
 ## Access
 
@@ -38,7 +37,7 @@ https://andrediop.github.io/Password-Generator/
 or through the Github repository
 
 
-1. Users will navigate to the github Repository to clone the repository.
+1. Users will navigate to the Github Repository to clone the repository.
 ```bash
 https://github.com/AndreDiop/Password-Generator
 ```
@@ -71,7 +70,7 @@ When users decline to modify their passwords, they are alerted that this makes t
 
 ## Screenshots
 
-These screen shots show the password prompts and the displayed password in the *password generator* field
+These screenshots show the password prompts and the displayed password in the *password generator* field
 
 ```bash
 Users are prompted to click the lock to begin
@@ -92,7 +91,7 @@ Users are presented with a password to use after clicking generate and answering
 
 ## Contributing
 
-This app couldn't have been built with out fellow students, instructors, tutors, and TA's of the GT coding bootcamp.
+This app couldn't have been built without fellow students, instructors, tutors, and TA's of the GT coding Bootcamp.
 
 I'm not taking requests at this time however, please reach out to me if you see ways that I can improve upon my code.
 
@@ -101,14 +100,21 @@ I'm not taking requests at this time however, please reach out to me if you see 
 
 Moving forward with this app I would like to reduce the amount of code used to make this app work.
 
+
+
 Using regex to represent large data sets of numbers with less redundancy.
 
 I would like to remove alerts from the functioning of the app and use something less intrusive or just having checkboxes of what the password requirements are.
 
-Add a paralax element to the background.
+Add a parallax element to the background.
 
-Consider using an 8 bit theme and going with a completely vibe that way.
+Consider using an 8-bit theme
+
+12/31/2020
+Coming back to this app I have since added some effects to the background, and given the text, this retro-led effect. The more and more I saw it, the more it gave me Matrix vibes, so I think I will eventually take it in that direction visually.
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
